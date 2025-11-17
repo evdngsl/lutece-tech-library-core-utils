@@ -99,4 +99,13 @@ public final class ServletLocalVariables
     {
         return _tlResponse.get( );
     }
+    /**
+     * Removes the current thread's value for this thread-local
+     *
+     */
+    public static void remove() {
+    	_tlResponse.remove();
+    	_tlRequest.remove();
+    	_tlConfig.remove();
+    }
 }
